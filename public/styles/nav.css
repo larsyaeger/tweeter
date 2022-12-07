@@ -1,0 +1,28 @@
+
+nav {
+  height: 120px;
+  width: 100vw;
+  background: #4056A1;
+  color: #FFFFFF;
+  padding: 1.5em;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+}
+nav > span {
+  font-family: 'Bungee', cursive;
+ }
+.newTweet {
+  display: flex;
+  justify-content: flex-end;
+}
+#arrow {
+  color: red;
+  margin-top: -20px;
+}
+.navTweetDiv {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}

@@ -1,0 +1,54 @@
+.allTweets {
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+  margin-top:30px;
+  margin-left:auto;
+  margin-bottom:30px;
+  margin-right:auto;
+  border-color:grey;
+  border-style:solid;
+  min-width: 50vw;
+  max-width: 50vw;
+  max-height:auto;
+}
+.allTweetsHeader {
+  display:flex;
+  align-items:center;
+}
+.allTweetsFooter{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+}
+.likesharesubscribe {
+  margin:20px
+}
+.tweetAge{
+  margin-left:5px;
+}
+.tweetersUsername {
+  color:rgba(115, 216, 236, 0.742)
+}
+.tweetersUsernameDiv{
+  display:flex;
+  margin-left:300px;
+}
+.fa-flag:hover{
+  color:yellow;
+  cursor:pointer;
+}
+.fa-repeat:hover {
+  color:yellow;
+  cursor:pointer;
+}
+
+.fa-heart:hover {
+  color:yellow;
+  cursor:pointer;
+}
+.allTweets:hover {
+  box-shadow: 5px 10px;
+}
+
+
