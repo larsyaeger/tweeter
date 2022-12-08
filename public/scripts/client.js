@@ -74,23 +74,31 @@ const renderTweets = function(tweets) {
 };
 const loadTweets = function() {
   $.ajax('http://localhost:8080/tweets', { method: 'GET' })
-  .then(function (data) {
-    console.log('Success: ', renderTweets(data));
-  })
-  .catch(err => {
-    console.log(err);
-  })
-}
+    .then(function(data) {
+      console.log('Success: ', renderTweets(data));
+    })
+    .catch(err => {
+      console.log(err);
+    });
+};
 $(document).ready(() => {
   //renderTweets(data);
   loadTweets();
   $("form").on("submit", function(event) {
     event.preventDefault();
-   // console.log($(this).serialize);
-    $.post('/tweets', $(this).serialize(), () => {
-      loadTweets();
-    });
-    
+    // console.log($(this).serialize);
+    let charCounter = document.getElementById('charCounter');
+    charCounter = parseInt(charCounter.innerHTML);
+    console.log(charCounter);
+    if (charCounter < 0) {
+      alert('You have exceeded the character limit');
+    } else if (charCounter == 140) {
+      alert('You attempted to submit an empty tweet');
+    } else {
+      $.post('/tweets', $(this).serialize(), () => {
+        loadTweets();
+      });
+    }
   });
 });
 
