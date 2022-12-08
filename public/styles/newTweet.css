@@ -49,3 +49,11 @@ textarea {
 #tweet-button:hover {
   cursor:pointer;
 }
+.error-msg {
+  color:red;
+  display:none;
+}
+.error-msg2 {
+  color:red;
+  display:none;
+}

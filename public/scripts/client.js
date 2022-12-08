@@ -95,9 +95,13 @@ $(document).ready(() => {
     charCounter = parseInt(charCounter.innerHTML);
     console.log(charCounter);
     if (charCounter < 0) {
-      alert('You have exceeded the character limit');
+      $('.error-msg2').hide()
+      $('.error-msg').show();
+      //alert('You have exceeded the character limit');
     } else if (charCounter == 140) {
-      alert('You attempted to submit an empty tweet');
+      $('.error-msg').hide();
+      $('.error-msg2').show();
+      //alert('You attempted to submit an empty tweet');
     } else {
       $.post('/tweets', $(this).serialize(), () => {
         loadTweets();
