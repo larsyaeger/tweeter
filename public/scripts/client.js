@@ -32,7 +32,11 @@
 //     "created_at": 1461113959088
 //   }
 // ];
-
+const escapefnc = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
 const createTweetElement = function(tweet) {
   const $tweet = $(` <article class="alltweetsarticle">
   <header class="allTweetsHeader">
@@ -49,7 +53,7 @@ const createTweetElement = function(tweet) {
     </div>
     </header>
   <div class="tweetTextBody">
-    ${tweet.content.text}
+    ${escapefnc(tweet.content.text)}
     <hr class="line">
   </div>
   <footer class="allTweetsFooter">
