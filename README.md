@@ -7,10 +7,10 @@ This one was lots of fun, lots of trial and error with CSS, interesting to use j
 
 ## Screenshots
 
-(https://github.com/larsyaeger/tweeter/blob/master/screenshots/Screenshot%202022-12-09%20at%2009.43.37.png?raw=true)
-(https://github.com/larsyaeger/tweeter/blob/master/screenshots/Screenshot%202022-12-09%20at%2009.44.02.png?raw=true)
-(https://github.com/larsyaeger/tweeter/blob/master/screenshots/Screenshot%202022-12-09%20at%2009.44.31.png?raw=true)
-(https://github.com/larsyaeger/tweeter/blob/master/screenshots/Screenshot%202022-12-09%20at%2009.44.56.png?raw=true)
+![](https://github.com/larsyaeger/tweeter/blob/master/screenshots/Screenshot%202022-12-09%20at%2009.43.37.png?raw=true)
+![](https://github.com/larsyaeger/tweeter/blob/master/screenshots/Screenshot%202022-12-09%20at%2009.44.02.png?raw=true)
+![](https://github.com/larsyaeger/tweeter/blob/master/screenshots/Screenshot%202022-12-09%20at%2009.44.31.png?raw=true)
+![](https://github.com/larsyaeger/tweeter/blob/master/screenshots/Screenshot%202022-12-09%20at%2009.44.56.png?raw=true)
 
 ## Getting Started
 
