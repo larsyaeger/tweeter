@@ -80,6 +80,8 @@ $(document).ready(() => {
       $('.error-msg2').show();
       //You attempted to submit an empty tweet
     } else {
+      $('.error-msg').hide();
+      $('.error-msg2').hide();
       $.post('/tweets', $(this).serialize(), () => {
         loadTweets();
       });
