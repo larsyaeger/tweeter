@@ -6,11 +6,14 @@
 .tweetTextbox {
   display: flex;
   flex-direction: column;
-  border-color: grey;
-  border-style: solid;
+  /* border-color: grey;
+  border-style: solid; */
   padding: 15px;
-  min-width: 50vw;
+  width: 70vw;
 }
+/* .tweetTextbox:hover {
+  box-shadow: 5px 10px;
+} */
 textarea {
   resize:none;
 }
@@ -23,6 +26,7 @@ textarea {
 #tweet-button {
   background-color:rgba(0, 255, 247, 0.3); ;
   color: grey;
+  height:fit-content;
 }
 .counterRed{
   color :red;
@@ -34,8 +38,9 @@ textarea {
   background-color: #f4f1ec;
   min-height:30px;
   max-height: 150px;
-  width: 45vw;
+  width: 90%;
   border-style:hidden;
+  margin-left:20px;
 }
 .line {
   border: 0;
@@ -56,4 +61,15 @@ textarea {
 .error-msg2 {
   color:red;
   display:none;
+}
+
+/* DESKTOP CSS */
+@media only screen and (min-width: 1024px) {
+  .new-tweet {
+  margin-top:35vh;
+  margin-right:15vw;
+  }
+  .tweetTextbox{
+    width:40vw;
+  }
 }

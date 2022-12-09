@@ -1,20 +1,31 @@
 .allTweets {
-  display:flex;
+  
   align-items:center;
   flex-direction:column;
   margin-top:30px;
   margin-left:auto;
   margin-bottom:30px;
   margin-right:auto;
-  border-color:grey;
-  border-style:solid;
+  /* border-color:grey;
+  border-style:solid; */
   min-width: 50vw;
   max-width: 50vw;
   max-height:auto;
 }
+.alltweetsarticle {
+  border-style:solid;
+  border-color:grey;
+  margin:20px;
+  max-height:auto;
+  min-width: 50vw;
+  /* padding:10px; */
+
+}
 .allTweetsHeader {
   display:flex;
   align-items:center;
+  margin-left:1.5vw;
+  margin-top:1vh;
 }
 .allTweetsFooter{
   display:flex;
@@ -22,17 +33,20 @@
   justify-content: space-between;
 }
 .likesharesubscribe {
-  margin:20px
+  margin:2.5vw;
 }
 .tweetAge{
-  margin-left:5px;
+  margin-left:1.5vw;
 }
 .tweetersUsername {
-  color:rgba(115, 216, 236, 0.742)
+  color:rgba(115, 216, 236, 0.742);
+  margin-right:1vw;
+}
+.tweetersUsername:hover {
+  cursor:pointer;
 }
 .tweetersUsernameDiv{
-  display:flex;
-  margin-left:300px;
+  margin-left:auto;
 }
 .fa-flag:hover{
   color:yellow;
@@ -47,8 +61,22 @@
   color:yellow;
   cursor:pointer;
 }
-.allTweets:hover {
+/* .allTweets:hover {
+  box-shadow: 5px 10px;
+} */
+.alltweetsarticle:hover {
   box-shadow: 5px 10px;
 }
 
+.tweetersText {
+  margin-left: 1.5vw;
+  margin-right: 1vw;
+  margin-bottom: -5px;
+}
 
+/* DESKTOP CSS */
+@media only screen and (min-width: 1024px) {
+  .allTweets{
+    margin-right:10vw;
+  }
+}

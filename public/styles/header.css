@@ -5,8 +5,35 @@
   justify-content: flex-end;
   flex-direction: column;
   align-items: center;
-  background-color: #f8ff91;
+  background-color: #78e6e4ab;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+.avatarAndName{
+  align-items:center;
+  display:flex;
+  flex-direction:column;
+}
+/* DESKTOP CSS */
+@media only screen and (min-width: 1024px) {
+  .profileHeader{
+  background-color:#f4f1ec;
+  background-image:none;
+  height:50vh;
+  align-items:flex-start;
+  margin-left:7.5vw;
+  min-height:550px
+  }
+  .avatarAndName {
+
+    background-color: #78e6e4ab;;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+    padding-top:2vw;
+    padding-right:7vw;
+    padding-left:7vw;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
 }
