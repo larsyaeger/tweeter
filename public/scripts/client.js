@@ -53,7 +53,7 @@ const createTweetElement = function(tweet) {
     </div>
     </header>
   <div class="tweetTextBody">
-    ${escapefnc(tweet.content.text)}
+   <p class="tweetersText"> ${escapefnc(tweet.content.text)}</p>
     <hr class="line">
   </div>
   <footer class="allTweetsFooter">
