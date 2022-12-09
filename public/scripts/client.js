@@ -7,36 +7,13 @@
 
 
 
-// const data = [
-//   {
-//     "user": {
-//       "name": "Newton",
-//       "avatars": "https://i.imgur.com/73hZDYK.png"
-//       ,
-//       "handle": "@SirIsaac"
-//     },
-//     "content": {
-//       "text": "If I have seen further it is by standing on the shoulders of giants"
-//     },
-//     "created_at": 1461116232227
-//   },
-//   {
-//     "user": {
-//       "name": "Descartes",
-//       "avatars": "https://i.imgur.com/nlhLi3I.png",
-//       "handle": "@rd"
-//     },
-//     "content": {
-//       "text": "Je pense , donc je suis"
-//     },
-//     "created_at": 1461113959088
-//   }
-// ];
+//function to prevent weird <script> stuff when typed into the tweet text box
 const escapefnc = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
+//html stuff/outline
 const createTweetElement = function(tweet) {
   const $tweet = $(` <article class="alltweetsarticle">
   <header class="allTweetsHeader">
@@ -69,6 +46,7 @@ const createTweetElement = function(tweet) {
 </article>`);
   return $tweet;
 };
+//empty #tweets-contaier before rendering tweets so old ones don't get duplicated
 const renderTweets = function(tweets) {
   $('#tweets-container').empty();
   for (let tweet of tweets) {
@@ -76,6 +54,7 @@ const renderTweets = function(tweets) {
     $('#tweets-container').prepend($tweet);
   }
 };
+//this runs when document is ready and every time a new tweet is submitted
 const loadTweets = function() {
   $.ajax('http://localhost:8080/tweets', { method: 'GET' })
     .then(function(data) {
@@ -86,22 +65,20 @@ const loadTweets = function() {
     });
 };
 $(document).ready(() => {
-  //renderTweets(data);
   loadTweets();
   $("form").on("submit", function(event) {
     event.preventDefault();
-    // console.log($(this).serialize);
     let charCounter = document.getElementById('charCounter');
     charCounter = parseInt(charCounter.innerHTML);
     console.log(charCounter);
     if (charCounter < 0) {
       $('.error-msg2').hide()
       $('.error-msg').show();
-      //alert('You have exceeded the character limit');
+      //You have exceeded the character limit
     } else if (charCounter == 140) {
       $('.error-msg').hide();
       $('.error-msg2').show();
-      //alert('You attempted to submit an empty tweet');
+      //You attempted to submit an empty tweet
     } else {
       $.post('/tweets', $(this).serialize(), () => {
         loadTweets();
@@ -110,4 +87,3 @@ $(document).ready(() => {
   });
 });
 
-//new Date(tweet.created_at)
