@@ -1,4 +1,4 @@
-console.log('!!composer-char-counter loaded succesfully!!');
+//function reads characters that have been typed and updates the counter accordingly
 $(document).ready(function() {
   $('#tweet-text').keyup(function(event) {
     $('#charCounter').text(140 - $(this).val().length);
