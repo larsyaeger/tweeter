@@ -83,6 +83,9 @@ $(document).ready(() => {
       $('.error-msg').hide();
       $('.error-msg2').hide();
       $.post('/tweets', $(this).serialize(), () => {
+        //reset the values to default for counter and textarea
+        $('#tweet-text').val('');
+        $('#charCounter').text(140);
         loadTweets();
       });
     }
