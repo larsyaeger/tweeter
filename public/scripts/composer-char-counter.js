@@ -1,6 +1,6 @@
 //function reads characters that have been typed and updates the counter accordingly
 $(document).ready(function() {
-  $('#tweet-text').keyup(function(event) {
+  $('#tweet-text').bind('input propertychange', function(event) {
     $('#charCounter').text(140 - $(this).val().length);
      let x = $(this).val().length
      if (x > 140) {
